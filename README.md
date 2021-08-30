@@ -2,7 +2,7 @@
 天天基金网 Node.js API service
 
 # 文档
-> [(正在建设中...)https://kouchao.github.io/TiantianFundApi/](https://kouchao.github.io/TiantianFundApi/)
+> [https://kouchao.github.io/TiantianFundApi/](https://kouchao.github.io/TiantianFundApi/)
 
 # 安装
 ```
