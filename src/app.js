@@ -7,11 +7,13 @@ const app = new koa()
 
 const router = new Router()
 
-const files = glob.sync("./module/*.js")
+const files = glob.sync("./src/module/*.js")
+
 files.forEach(path => {
-  const fileName = path.replace('./module/', '').replace('.js', '')
+  const fileName = path.replace('./src/module/', '').replace('.js', '')
   const routerPath = `/${fileName}`
-  const api = require(path)
+  const api = require(path.replace('/src', ''))
+
   console.log(`✅ 生成路由(文件) ${routerPath}`)
 
   router.get(routerPath, async (ctx, next) => {
