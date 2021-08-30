@@ -1,0 +1,27 @@
+{
+  "name": "tiantianfundapi",
+  "version": "1.0.0",
+  "description": "天天基金网 Node.js API service",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kouchao/TiantianFundApi.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kouchao/TiantianFundApi/issues"
+  },
+  "homepage": "https://github.com/kouchao/TiantianFundApi#readme",
+  "dependencies": {
+    "@koa/router": "^10.1.1",
+    "axios": "^0.21.1",
+    "glob": "^7.1.7",
+    "koa": "^2.13.1"
+  }
+}
