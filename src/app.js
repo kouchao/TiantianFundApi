@@ -13,7 +13,9 @@ files.forEach(path => {
   const routerPath = `/${fileName}`
   const api = require(path.replace('/src', ''))
 
-  console.log(`✅ 生成路由(文件) ${routerPath}`)
+  app[fileName] = api
+
+  console.log(`✅ 生成路由 ${routerPath}`)
 
   router.get(routerPath, async (ctx, next) => {
     ctx.status = 200
@@ -27,3 +29,5 @@ app.use(router.routes()).use(router.allowedMethods())
 app.listen(3000, () => {
   console.log('🚀 server is running at port 3000')
 })
+
+module.exports = app
