@@ -1,7 +1,6 @@
 const koa = require('koa')
 const Router = require('@koa/router')
 const glob = require("glob")
-const routes = require('./routes/index.js')
 
 const app = new koa()
 
@@ -22,8 +21,6 @@ files.forEach(path => {
     next()
   })
 })
-
-routes(router)
 
 app.use(router.routes()).use(router.allowedMethods())
 
