@@ -1,8 +1,7 @@
 const { request } = require('../utils/index.js')
 
 /**
- * m 基金:1 基金经理:6 基金公司:7
- * key 关键字
+ * 基金搜索
  */
 module.exports = async (params) => {
   const url =
