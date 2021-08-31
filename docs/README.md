@@ -24,11 +24,12 @@ npm run start
 **参数**
 
 `m` 搜索类别
-- 基金: `1`
-- 基金经理: `7`
-- 基金公司: `8`
+- 搜基金: `1`
+- 按字母公司搜基金: `3`
+- 搜基金经理: `7`
+- 搜基金公司: `8`
 
-`key`: 关键字
+`key`: 关键字，当值为`3`时,仅`a-z`有效
 
 **结果**
 `/fundSearch?m=1&key=11`
@@ -83,17 +84,33 @@ npm run start
 }]
 ```
 
-`/fundSearch?m=8&key=w`
+`/fundSearch?m=3&key=w`
 ```
 [{
-"JJGSID": "80000031",
-"JJGS": "东吴证券",
-"JJGSJP": "DWZQ",
-"GSJJBID": "",
-"QXJJ": null
+  "JJGSID": "81052915",
+  "JJGS": "安信证券资产",
+  "JJGSJP": "",
+  "GSJJBID": null,
+  "QXJJ": [
+    {
+    "_id": "970003",
+    "FCODE": "970003",
+    "SHORTNAME": "安信瑞鸿中短债A"
+    }
+  ]
 }]
 ```
 
+`/fundSearch?m=8&key=w`
+```
+[{
+  "JJGSID": "80000031",
+  "JJGS": "东吴证券",
+  "JJGSJP": "DWZQ",
+  "GSJJBID": "",
+  "QXJJ": null
+}]
+```
 ## 获取基金列表（按字幕）
 
 **路由**
