@@ -4,11 +4,11 @@ const axios = require('axios')
 const request = async (url, params) => {
   const res = await axios(url, {
     params: {
-      ...params,
       deviceid: 'Wap',
       plat: 'Wap',
       product: 'EFund',
       version: '2.0.0',
+      ...params,
     },
   })
   return res.data

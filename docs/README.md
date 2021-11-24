@@ -20,10 +20,10 @@ npm run start
 
 `/fundSearch`
 
-
 **参数**
 
 `m` 搜索类别
+
 - 搜基金: `1`
 - 按字母公司搜基金: `3`
 - 搜基金经理: `7`
@@ -33,6 +33,7 @@ npm run start
 
 **结果**
 `/fundSearch?m=1&key=11`
+
 ```
 [{
   "_id": "110003",
@@ -73,6 +74,7 @@ npm run start
 ```
 
 `/fundSearch?m=7&key=w`
+
 ```
 [{
   "MgrId": "30728448",
@@ -85,6 +87,7 @@ npm run start
 ```
 
 `/fundSearch?m=3&key=w`
+
 ```
 [{
   "JJGSID": "81052915",
@@ -102,6 +105,7 @@ npm run start
 ```
 
 `/fundSearch?m=8&key=w`
+
 ```
 [{
   "JJGSID": "80000031",
@@ -111,16 +115,17 @@ npm run start
   "QXJJ": null
 }]
 ```
+
 ## 获取基金列表（按字母）
 
 **路由**
 
 `/fundNetList`
 
-
 **参数**
 
 `fundtype`: 基金类型
+
 - 全部: `0`
 - 股票: `25`
 - 混合: `27`
@@ -130,14 +135,17 @@ npm run start
 - 理财: `2949`
 
 `SortColumn`: 排序列
+
 - 日涨幅: `RDZF`
 - 最新净值: `DWJZ`
 
 `Sort`: 排序方式
+
 - 降序: `desc`
 - 升序: `asc`
 
 `Letter`: 字母排序
+
 - 全部: 不写
 - A: `a`
 - B: `b`
@@ -155,10 +163,10 @@ npm run start
 
 `/fundMNNetNewList`
 
-
 **参数**
 
 `fundtype`: 基金类型
+
 - 全部: `0`
 - 股票: `25`
 - 混合: `27`
@@ -168,14 +176,17 @@ npm run start
 - 理财: `2949`
 
 `SortColumn`: 排序列
+
 - 最新净值: `HLDWJZ`
 - 七日年化: `LJJZ`
 
 `Sort`: 排序方式
+
 - 降序: `desc`
 - 升序: `asc`
 
 `Letter`: 字母排序
+
 - 全部: 不写
 - A: `a`
 - B: `b`
@@ -188,11 +199,46 @@ npm run start
 `pagesize`: 每页条数
 
 ## 获取基金列表(所有-简单)
+
 **路由**
 
 `/fundSuggestList`
 
 ## 获取基金公司列表（所有）
+
 **路由**
 
 `/fundCompanyBaseList`
+
+## 获取基金简介
+
+**路由**
+
+`/fundMNStopWatch`
+**参数**
+
+`FCODE`: 基金代码
+
+```
+{
+  "FCODE": "580007",
+  "SHORTNAME": "东吴安享量化混合",
+  "ABBTNAME": "DONGWUANXIANGLIANGHUAHUNHE",
+  "P": "F",
+  "T": "H",
+  "F": "--",
+  "FTYPE": "混合型-灵活",
+  "BACKCODE": "--",
+  "REALSGCODE": "--",
+  "QDTCODE": "--",
+  "LISTTEXCH": "--",
+  "FEATURE": "215",
+  "TSRQ": "--",
+  "INDEXCODE": "--",
+  "INDEXNAME": "--",
+  "INDEXTEXCH": "--",
+  "BFUNDTYPE": "002",
+  "ESTABDATE": "2010-06-29",
+  "ISPTP": "--"
+}
+```
