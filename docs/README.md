@@ -242,3 +242,32 @@ npm run start
   "ISPTP": "--"
 }
 ```
+
+## 热门主题
+> app 底部提示数据来源来自 choice
+**路由**
+
+`/fundThemeList`
+**参数**
+
+`RankItems`: 时间
+- 涨幅（实时）: `ZDF`
+- 涨幅（近1周）: `SYL_W`
+- 涨幅（近1月）: `SYL_M`
+- 涨幅（近3月）: `SYL_Q`
+- 涨幅（近1年）: `SYL_1N`
+- 涨幅（近1年）: `SYL_1N`
+- 涨幅（今年来）: `SYL_JN`
+- 资金流（实时）: `Cinflow`
+- 资金流（近1周）: `Cinflow_W`
+- 涨速（3分钟）: `ZS_3`
+- 涨速（5分钟）: `ZS_5`
+
+`RankVectors`: 排序
+- 降序: `desc`
+- 升序: `asc`
+
+`category` 类别
+- 全部: `2`
+- 行业: `0`
+- 概念: `1`
