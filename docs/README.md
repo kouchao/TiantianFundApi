@@ -271,3 +271,12 @@ npm run start
 - 全部: `2`
 - 行业: `0`
 - 概念: `1`
+
+
+## 主题焦点
+> app 底部提示数据来源来自 choice
+**路由**
+`/fundThemeFocusList`
+**参数**
+
+`code`: 焦点所属 code （没找到在哪，可不填）
