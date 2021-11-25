@@ -648,3 +648,13 @@ npm run start
   }
 }]
 ```
+
+### 获取大数据榜单数据详情
+
+**路由**
+
+`/bigDataDetail`
+
+**参数**
+
+`cltype` 榜单id （通过 `/bigDataList` 获取）
