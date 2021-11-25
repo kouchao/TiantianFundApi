@@ -407,7 +407,7 @@ npm run start
 
 `CompanyId`: 基金公司 id （通过`/fundCompanyBaseList`获取）
 
-`CLTYPE`: 筛选方案（多选用`,`分开，如`022,006`）
+`CLTYPE`: 筛选方案（多选用`,`分开，如`022,006`）（通过`/bigDataList`获取）
 
 - 全部: `0`
 - 金牛奖: `022`
@@ -602,3 +602,49 @@ npm run start
 
 - 可不传
   - `LevelTwo`
+
+## 大数据
+
+### 获取大数据榜单
+
+**路由**
+
+`/bigDataList`
+
+**参数**
+
+`ClCategory：` 类型
+
+- 全部榜单：`0`
+- 独家数据：`1`
+- 策略精选：`2`
+- 主题热榜：`3`
+
+**结果**
+
+```js
+[{
+  "ClType": "001",
+  "SType": "5",
+  "ClCategory": "1",
+  "Title": "大家都在买",
+  "SubTitle": "近1月购买人数最多",
+  "SubColor": "#999999",
+  "Text": "热销",
+  "IsTextShow": "0",
+  "Description": "展示近一月购买人数最多的基金，并显示基金即时的近一年收益率。销量数据来自天天基金平台。（数据榜单仅供参考，过往业绩不预示未来表现，不构成任何投资建议。投资者据此购买的，风险自担。)",
+  "FontColor": "#FF4400",
+  "FundCode": "161725",
+  "FundName": "招商中证白酒指数(LOF)A",
+  "SYL": "54",
+  "ShowunitMark": "万人",
+  "PeriodText": "购买",
+  "Link": {
+    "LinkType": 1,
+    "AdId": 0,
+    "LinkTo": "fund://mp.1234567.com.cn/weex/81b5a1d2a2f14d968dedf3ffdf5a6426/pages/strategyPage?tacticsType=001&Stype=5",
+    "IsVerifyLogin": false,
+    "WapLink": ""
+  }
+}]
+```
