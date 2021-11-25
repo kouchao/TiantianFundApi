@@ -1,13 +1,21 @@
 const axios = require('axios')
 
+const deviceId = '874C427C-7C24-4980-A835-66FD40B67605'
+const version = '6.4.9'
+
 // 发送请求
 const request = async (url, params) => {
   const res = await axios(url, {
     params: {
       product: 'EFund',
-      deviceid: '874C427C-7C24-4980-A835-66FD40B67605',
+      deviceid: deviceId,
+      MobileKey: deviceId,
       plat: 'Iphone',
-      version: '6.4.9',
+      PhoneType: 'IOS15.1.0',
+      version,
+      ServerVersion: version,
+      Version: version,
+      appVersion: version,
       ...params,
     },
   })
