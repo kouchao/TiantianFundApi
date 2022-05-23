@@ -1,7 +1,7 @@
 const axios = require('axios')
 
 const deviceId = '874C427C-7C24-4980-A835-66FD40B67605'
-const version = '6.4.9'
+const version = '6.5.5'
 
 // 发送请求
 const request = async (url, params) => {
@@ -12,6 +12,7 @@ const request = async (url, params) => {
       MobileKey: deviceId,
       plat: 'Iphone',
       PhoneType: 'IOS15.1.0',
+      OSVersion: '15.5',
       version,
       ServerVersion: version,
       Version: version,
