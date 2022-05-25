@@ -6,9 +6,11 @@
 
 > 天天基金网 NodeJS 版 API
 
-- 接口正在持续更新
-- 正在做：提高字段可读性
-- 文档正在完善
+- 接口持续更新
+- 提高字段可读性
+- 文档完善
+- 测试用例
+- docker部署
 
 [GitHub](https://github.com/kouchao/TiantianFundApi)
 [Get Started](#快速开始)
