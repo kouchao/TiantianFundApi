@@ -19,7 +19,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm i
       - run: pnpm start
-      - run: pnpm run test
+      - run: pnpm run test-reporter
 
       - name: Test Report
         uses: dorny/test-reporter@v1
