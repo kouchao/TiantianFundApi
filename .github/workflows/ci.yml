@@ -22,9 +22,9 @@ jobs:
 
       - name: Test Report
         uses: dorny/test-reporter@v1
-        if: success() || failure()    # run this step even if previous step failed
+        if: success() || failure()
         with:
-          name: JEST Tests            # Name of the check run which will be created
+          name: MOCHA Tests
           reporter: mocha-json
   build-and-deploy:
     runs-on: ubuntu-latest

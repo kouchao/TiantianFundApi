@@ -1,9 +1,9 @@
 const fs = require('fs')
 const path = require('path')
-const serverLoad = require('./index')
+const startServe = require('./index')
 let server
 before(async () => {
-  server = await serverLoad
+  server = await startServe()
 })
 
 after((done) => {
