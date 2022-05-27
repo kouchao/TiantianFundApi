@@ -4,6 +4,15 @@ const host = 'http://localhost:3001'
 
 describe('基金接口', function () {
   it('获取基金详情', async function () {
+    const res = await axios(`${host}/fundMNStopWatch`, {
+      params: {
+        FCODE: '003834'
+      }
+    })
+    assert.equal(res.data.Datas.FCODE, '003834');
+  });
+
+  it('获取基金详情', async function () {
     const res = await axios(`${host}/fundMNDetailInformation`, {
       params: {
         FCODE: '003834'
