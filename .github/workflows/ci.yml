@@ -1,4 +1,4 @@
-name: deploy ppt
+name: ci
 on:
   push:
     pull_request:
@@ -6,7 +6,7 @@ on:
       - main
 jobs:
   test:
-    name: Test
+    name: 自动化测试
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -23,18 +23,16 @@ jobs:
         uses: dorny/test-reporter@v1
         if: success() || failure()
         with:
-          name: MOCHA Tests
+          name: 测试报告
           path: test-results.json
           reporter: mocha-json
-  build-and-deploy:
+  deploy-doc:
+    name: 部署文档
     needs: test
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v2.3.1
-
-      - name: Deploy Docs 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+      - uses: actions/checkout@v2.3.1
+      - uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: ./docs
