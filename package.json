@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "cross-env NODE_ENV=test mocha server.test.js",
-    "test-reporter": "cross-env NODE_ENV=test mocha server.test.js --reporter json > test-results.json"
+    "test": "cross-env NODE_ENV=test mocha --require ./test/fixtures.js ./test/**/*.spec.js",
+    "test-reporter": "cross-env NODE_ENV=test mocha --require ./test/fixtures.js ./test/**/*.spec.js --reporter json > test-results.json"
   },
   "repository": {
     "type": "git",
