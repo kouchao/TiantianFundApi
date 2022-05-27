@@ -18,7 +18,6 @@ jobs:
           node-version: 14
           cache: 'pnpm'
       - run: pnpm i
-      - run: pnpm start
       - run: pnpm run test-reporter
 
       - name: Test Report
