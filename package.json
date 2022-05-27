@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
     "axios": "^0.21.1",
     "glob": "^7.1.7",
     "koa": "^2.13.1"
+  },
+  "devDependencies": {
+    "mocha": "^10.0.0"
   }
 }
