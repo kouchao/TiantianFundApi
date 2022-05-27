@@ -9,7 +9,7 @@
 - 接口持续更新
 - 提高字段可读性
 - 文档完善
-- 测试用例
+- 测试用例 ✅
 - docker部署
 
 [GitHub](https://github.com/kouchao/TiantianFundApi)
