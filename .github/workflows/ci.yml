@@ -19,12 +19,12 @@ jobs:
           cache: 'pnpm'
       - run: pnpm i
       - run: pnpm run test-reporter
-
       - name: Test Report
         uses: dorny/test-reporter@v1
         if: success() || failure()
         with:
           name: MOCHA Tests
+          path: test-results.json
           reporter: mocha-json
   build-and-deploy:
     runs-on: ubuntu-latest
