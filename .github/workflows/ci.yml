@@ -28,13 +28,3 @@ jobs:
           name: 测试报告
           path: test-results.json
           reporter: mocha-json
-  deploy-doc:
-    name: 部署文档
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2.3.1
-      - uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages
-          folder: ./docs
