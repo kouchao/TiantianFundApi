@@ -1,8 +1,10 @@
-name: ci
+name: 部署文档
 on:
   push:
     branches:
       - main
+    paths:
+      - 'docs/**'
 jobs:
   deploy-doc:
     name: 部署文档
