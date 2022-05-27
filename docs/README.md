@@ -937,7 +937,7 @@ npm run start
 
 **路由**
 
-`/fundVarietieValuationDetail`
+`/fundMNHisNetList`
 
 **参数**
 
