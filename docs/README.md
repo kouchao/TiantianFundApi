@@ -14,7 +14,8 @@ npm run start
 
 # 接口列表
 
-## 基金搜索
+## 搜索
+### 基金搜索
 
 **路由**
 
@@ -116,7 +117,7 @@ npm run start
 }]
 ```
 
-## 获取基金列表（按字母）
+### 获取基金列表（按字母）
 
 **路由**
 
@@ -157,7 +158,7 @@ npm run start
 
 `pagesize`: 每页条数
 
-## 获取基金列表（按类型）
+### 获取基金列表（按类型）
 
 **路由**
 
@@ -198,50 +199,17 @@ npm run start
 
 `pagesize`: 每页条数
 
-## 获取基金列表(所有-简单)
+### 获取基金列表(所有-简单)
 
 **路由**
 
 `/fundSuggestList`
 
-## 获取基金公司列表（所有）
+### 获取基金公司列表（所有）
 
 **路由**
 
 `/fundCompanyBaseList`
-
-## 获取基金简介
-
-**路由**
-
-`/fundMNStopWatch`
-**参数**
-
-`FCODE`: 基金代码
-
-```
-{
-  "FCODE": "580007",
-  "SHORTNAME": "东吴安享量化混合",
-  "ABBTNAME": "DONGWUANXIANGLIANGHUAHUNHE",
-  "P": "F",
-  "T": "H",
-  "F": "--",
-  "FTYPE": "混合型-灵活",
-  "BACKCODE": "--",
-  "REALSGCODE": "--",
-  "QDTCODE": "--",
-  "LISTTEXCH": "--",
-  "FEATURE": "215",
-  "TSRQ": "--",
-  "INDEXCODE": "--",
-  "INDEXNAME": "--",
-  "INDEXTEXCH": "--",
-  "BFUNDTYPE": "002",
-  "ESTABDATE": "2010-06-29",
-  "ISPTP": "--"
-}
-```
 
 ## 基金主题
 
@@ -661,6 +629,39 @@ npm run start
 
 ## 基金
 
+### 获取基金简介
+
+**路由**
+
+`/fundMNStopWatch`
+**参数**
+
+`FCODE`: 基金代码
+
+```
+{
+  "FCODE": "580007",
+  "SHORTNAME": "东吴安享量化混合",
+  "ABBTNAME": "DONGWUANXIANGLIANGHUAHUNHE",
+  "P": "F",
+  "T": "H",
+  "F": "--",
+  "FTYPE": "混合型-灵活",
+  "BACKCODE": "--",
+  "REALSGCODE": "--",
+  "QDTCODE": "--",
+  "LISTTEXCH": "--",
+  "FEATURE": "215",
+  "TSRQ": "--",
+  "INDEXCODE": "--",
+  "INDEXNAME": "--",
+  "INDEXTEXCH": "--",
+  "BFUNDTYPE": "002",
+  "ESTABDATE": "2010-06-29",
+  "ISPTP": "--"
+}
+```
+
 ### 获取基金详情
 
 **路由**
@@ -709,6 +710,7 @@ npm run start
   }
 }
 ```
+
 ### 获取基金评级
 
 **路由**
