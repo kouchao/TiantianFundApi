@@ -27,6 +27,7 @@ jobs:
           path: test-results.json
           reporter: mocha-json
   build-and-deploy:
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️
