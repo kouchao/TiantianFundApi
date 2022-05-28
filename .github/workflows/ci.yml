@@ -28,3 +28,7 @@ jobs:
           name: 测试报告
           path: test-results.json
           reporter: mocha-json
+      - name: Report NYC coverage
+        uses: sidx1024/report-nyc-coverage-github-action@v1.1
+        with:
+          coverage_file: "coverage/coverage-summary.json"

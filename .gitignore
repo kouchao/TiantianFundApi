@@ -23,3 +23,5 @@ pnpm-debug.log*
 *.sw?
 
 test-results.json
+coverage
+.nyc_output
