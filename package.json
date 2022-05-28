@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "cross-env NODE_ENV=test nyc --reporter=json-summary mocha --require ./test/fixtures.js ./test/**/*.spec.js --timeout 30s",
-    "test-reporter": "cross-env NODE_ENV=test nyc --reporter=json-summary mocha --require ./test/fixtures.js ./test/**/*.spec.js --reporter json > test-results.json --timeout 30s"
+    "test": "cross-env NODE_ENV=test nyc --reporter=lcov mocha --require ./test/fixtures.js ./test/**/*.spec.js --timeout 30s",
+    "test-reporter": "cross-env NODE_ENV=test nyc --reporter=lcov mocha --require ./test/fixtures.js ./test/**/*.spec.js --reporter json > test-results.json --timeout 30s"
   },
   "repository": {
     "type": "git",
