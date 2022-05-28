@@ -25,8 +25,11 @@ jobs:
           name: 测试报告
           path: test-results.json
           reporter: mocha-json
+      - name: coverage check
+        uses: VeryGoodOpenSource/very_good_coverage@v1
+        with:
+          min_coverage: 95
       - name: Report NYC coverage
         uses: romeovs/lcov-reporter-action@v0.2.16
         with:
-          lcov-file: ./coverage/lcov.info
           github-token: ${{ secrets.GITHUB_TOKEN }}
