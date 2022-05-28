@@ -21,7 +21,6 @@ jobs:
           cache: 'pnpm'
       - run: pnpm i
       - run: pnpm run test-reporter
-      - run: pnpm run coverage-report
       - name: Test Report
         uses: dorny/test-reporter@v1
         if: success() || failure()
@@ -33,3 +32,4 @@ jobs:
         uses: sidx1024/report-nyc-coverage-github-action@v1.1
         with:
           coverage_file: coverage/coverage-summary.json
+          base_coverage_file: coverage/coverage-summary.json
