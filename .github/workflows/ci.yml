@@ -21,7 +21,7 @@ jobs:
           cache: 'pnpm'
       - run: pnpm i
       - run: pnpm run test-reporter
-      - run: coverage-report
+      - run: pnpm run coverage-report
       - name: Test Report
         uses: dorny/test-reporter@v1
         if: success() || failure()
