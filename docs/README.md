@@ -6,10 +6,17 @@
 npm i
 ```
 
-## 启动
 
+
+## 运行
+### node 中启动
 ```
 npm run start
+```
+
+### docker 中启动
+```
+docker run -d -p 3000:3000 kouchao/tiantian_fund_api
 ```
 
 # 接口列表
