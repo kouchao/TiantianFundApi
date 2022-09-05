@@ -35,8 +35,8 @@ function startServe() {
 
     app.use(router.routes()).use(router.allowedMethods())
 
-    const server = app.listen(3001, () => {
-      log('🚀 server is running at port 3001')
+    const server = app.listen(3000, () => {
+      log('🚀 server is running at port 3000')
       resolve(server)
     })
   })
