@@ -26,5 +26,5 @@ jobs:
           - name: Build and push
             uses: docker/build-push-action@v3
             with:
-              publish: true
+              push: true
               tags: kouchao/tiantian_fund_api:latest,kouchao/tiantian_fund_api:${{ steps.get_version.outputs.VERSION }}
