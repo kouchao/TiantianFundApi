@@ -1,8 +1,11 @@
 {
-  "name": "TiantianFundApi",
-  "version": "v1.0.0-alpha.4",
+  "name": "tiantian-fund-api",
+  "version": "v1.0.0-alpha.5",
   "description": "天天基金网 Node.js API service",
   "main": "src/index.js",
+  "files": [
+    "src"
+  ],
   "scripts": {
     "start": "node index.js",
     "lint": "eslint . --ext .js",
@@ -13,7 +16,12 @@
     "type": "git",
     "url": "git+https://github.com/kouchao/TiantianFundApi.git"
   },
-  "keywords": [],
+  "keywords": [
+    "天天基金网",
+    "东方财富",
+    "基金api",
+    "基金接口"
+  ],
   "author": "kouchao",
   "license": "ISC",
   "bugs": {
