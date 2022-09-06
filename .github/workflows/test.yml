@@ -1,4 +1,4 @@
-name: 自动化测试
+name: 🧪 自动化测试
 on:
   pull_request:
     branches:

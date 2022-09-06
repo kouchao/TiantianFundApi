@@ -1,4 +1,4 @@
-name: Npm Publish
+name: 📦 发布 npm 包
 
 on:
   push:
