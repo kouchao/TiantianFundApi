@@ -1,14 +1,14 @@
 const assert = require('assert');
-const axios = require('axios')
-const host = 'http://localhost:3001'
+const axios = require('axios');
+const host = 'http://localhost:3000';
 
 describe('经理接口', function () {
   it('获取基金经理信息', async function () {
     const res = await axios(`${host}/fundMSNMangerInfo`, {
       params: {
         FCODE: '30379614',
-      }
-    })
+      },
+    });
 
     assert.equal(res.data.Datas.MGRID, '30379614');
   });
@@ -17,9 +17,9 @@ describe('经理接口', function () {
     const res = await axios(`${host}/fundMSNMangerAcc`, {
       params: {
         mGRID: '30379614',
-        rANGe: 'y'
-      }
-    })
+        rANGe: 'y',
+      },
+    });
 
     assert.ok(res.data.Datas.length);
   });
@@ -28,8 +28,8 @@ describe('经理接口', function () {
     const res = await axios(`${host}/fundMSNMangerPerRank`, {
       params: {
         mGRID: '30379614',
-      }
-    })
+      },
+    });
     assert.ok(res.data.Datas.W);
   });
 
@@ -37,8 +37,8 @@ describe('经理接口', function () {
     const res = await axios(`${host}/fundMSNMangerPerEval`, {
       params: {
         mGRID: '30379614',
-      }
-    })
+      },
+    });
     assert.ok(res.data.Datas.MAXRETRA_1);
   });
 
@@ -46,8 +46,8 @@ describe('经理接口', function () {
     const res = await axios(`${host}/fundMSNMangerPosMark`, {
       params: {
         mGRID: '30379614',
-      }
-    })
+      },
+    });
     assert.ok(res.data.Datas.Pos.length);
   });
 
@@ -55,8 +55,8 @@ describe('经理接口', function () {
     const res = await axios(`${host}/fundMSNMangerPosChar`, {
       params: {
         mGRID: '30379614',
-      }
-    })
+      },
+    });
     assert.ok(res.data.Datas.REPORTDATE);
   });
 
@@ -64,8 +64,8 @@ describe('经理接口', function () {
     const res = await axios(`${host}/fundMSNMangerProContr`, {
       params: {
         mGRID: '30379614',
-      }
-    })
+      },
+    });
     assert.ok(res.data.Datas.length);
   });
 });

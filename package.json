@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "lint": "eslint . --ext .js",
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov mocha --require ./test/fixtures.js ./test/**/*.spec.js --timeout 30s",
     "test-reporter": "cross-env NODE_ENV=test nyc --reporter=lcov mocha --require ./test/fixtures.js ./test/**/*.spec.js --reporter json > test-results.json --timeout 30s"
   },
@@ -27,7 +28,11 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
+    "eslint": "^8.23.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "mocha": "^10.0.0",
-    "nyc": "^15.1.0"
+    "nyc": "^15.1.0",
+    "prettier": "^2.7.1"
   }
 }
