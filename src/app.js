@@ -1,7 +1,7 @@
 const koa = require('koa')
 const Router = require('@koa/router')
-const glob = require("glob")
 const {log} = require("./utils/log")
+const {getModules} = require("./utils")
 
 
 
@@ -15,12 +15,9 @@ function startServe() {
 
     const router = new Router()
 
-    const files = glob.sync("./src/module/*.js")
-
-    files.forEach(path => {
-      const fileName = path.replace('./src/module/', '').replace('.js', '')
+    getModules().forEach(({fileName, path}) => {
       const routerPath = `/${fileName}`
-      const api = require(path.replace('/src', ''))
+      const api = require(path)
 
       app[fileName] = api
 

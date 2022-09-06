@@ -1,5 +1,5 @@
 const axios = require('axios')
-const qs = require('querystring')
+const glob = require('glob')
 
 const headers = {
   validmark: 'aKVEnBbJF9Nip2Wjf4de/fSvA8W3X3iB4L6vT0Y5cxvZbEfEm17udZKUD2qy37dLRY3bzzHLDv+up/Yn3OTo5Q=='
@@ -49,8 +49,20 @@ const jsonp = async (url, callback, params) => {
   return JSON.parse(js.slice(callback.length + 1, js.length - 1))
 }
 
+const getModules = () => {
+  const files = glob.sync('./src/module/*.js')
+  return files.map(path => {
+    const fileName = path.replace('./src/module/', '').replace('.js', '')
+    return {
+      fileName,
+      path: path.replace('/src', ''),
+    }
+  })
+}
+
 module.exports = {
   request,
   post,
   jsonp,
+  getModules,
 }
