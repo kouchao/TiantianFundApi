@@ -10,7 +10,8 @@
 - 提高字段可读性
 - 文档完善 ✅
 - 测试用例 ✅
-- docker部署 ✅
+- docker 部署 ✅
+- node 中使用 ✅
 
 [GitHub](https://github.com/kouchao/TiantianFundApi)
 [Get Started](#快速开始)

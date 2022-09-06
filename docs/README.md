@@ -19,6 +19,22 @@ npm run start
 docker run -d -p 3000:3000 kouchao/tiantian_fund_api
 ```
 
+### node 中使用
+#### 安装
+```
+npm i tiantian-fund-api -S
+```
+#### 使用
+```javascript
+const { fundSearch } = require('tiantian-fund-api')
+async function main() {
+  const res = await fundSearch({
+    m: '1',
+    key: '11'
+  })
+}
+```
+
 # 接口列表
 
 ## 搜索
