@@ -11,7 +11,7 @@
 - 文档完善 ✅
 - 测试用例 ✅
 - docker 部署 ✅
-- node 中使用 ✅
+- vercel 示例 ✅
 
 [GitHub](https://github.com/kouchao/TiantianFundApi)
 [Get Started](#快速开始)
