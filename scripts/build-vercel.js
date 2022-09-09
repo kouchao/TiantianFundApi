@@ -12,13 +12,13 @@ if (!isExists) {
 }
 
 getModules().forEach(({ fileName, path: filepath }) => {
-  const js = `
-  const ${fileName} = require("../src${filepath.replace('.', '')}");
-  export default async function handler(request, response) {
-    const data = await ${fileName}(request.query);
-    response.status(200).json(data);
-  }
-  `;
+  const js = `const ${fileName} = require('../src${filepath.replace('.', '')}');
+
+module.exports = async function handler(request, response) {
+  const data = await ${fileName}(request.query);
+  response.status(200).json(data);
+};
+`;
 
   fs.writeFileSync(path.resolve(__dirname, `../${apiDir}/${fileName}.js`), js);
 });
