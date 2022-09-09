@@ -2,10 +2,13 @@ const fs = require('fs');
 const path = require('path');
 const { getModules } = require('../src/utils');
 
-const isExists = fs.existsSync(path.resolve(__dirname, '../apis'));
+const apiDir = 'api';
+const apiDirPath = path.resolve(__dirname, `../${apiDir}`);
+
+const isExists = fs.existsSync(apiDirPath);
 
 if (!isExists) {
-  fs.mkdirSync(path.resolve(__dirname, '../apis'));
+  fs.mkdirSync(apiDirPath);
 }
 
 getModules().forEach(({ fileName, path: filepath }) => {
@@ -17,5 +20,5 @@ getModules().forEach(({ fileName, path: filepath }) => {
   }
   `;
 
-  fs.writeFileSync(path.resolve(__dirname, `../apis/${fileName}.js`), js);
+  fs.writeFileSync(path.resolve(__dirname, `../${apiDir}/${fileName}.js`), js);
 });
