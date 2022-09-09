@@ -9,7 +9,6 @@
   "scripts": {
     "start": "node index.js",
     "lint": "eslint . --ext .js",
-    "build:vercel": "node scripts/build-vercel.js",
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov mocha --require ./test/fixtures.js ./test/**/*.spec.js --timeout 30s",
     "test-reporter": "cross-env NODE_ENV=test nyc --reporter=lcov mocha --require ./test/fixtures.js ./test/**/*.spec.js --reporter json > test-results.json --timeout 30s"
   },
