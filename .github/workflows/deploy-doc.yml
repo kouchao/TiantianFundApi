@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: 16
           cache: 'pnpm'
-      - run: pnpm install --frozen-lockfile
+        run: pnpm install --frozen-lockfile
 
       - name: Build VuePress site
         run: pnpm docs:build
