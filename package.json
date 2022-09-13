@@ -9,6 +9,8 @@
   "scripts": {
     "start": "node index.js",
     "lint": "eslint . --ext .js",
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
     "test": "cross-env NODE_ENV=test nyc --reporter=lcov mocha --require ./test/fixtures.js ./test/**/*.spec.js --timeout 30s",
     "test-reporter": "cross-env NODE_ENV=test nyc --reporter=lcov mocha --require ./test/fixtures.js ./test/**/*.spec.js --reporter json > test-results.json --timeout 30s"
   },
@@ -35,12 +37,15 @@
     "koa": "^2.13.1"
   },
   "devDependencies": {
+    "@vuepress/client": "2.0.0-beta.51",
     "cross-env": "^7.0.3",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
     "mocha": "^10.0.0",
     "nyc": "^15.1.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "vue": "^3.2.39",
+    "vuepress": "2.0.0-beta.51"
   }
 }

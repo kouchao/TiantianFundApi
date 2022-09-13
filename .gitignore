@@ -25,3 +25,8 @@ pnpm-debug.log*
 test-results.json
 coverage
 .nyc_output
+
+# vite
+.temp
+.cache
+dist
