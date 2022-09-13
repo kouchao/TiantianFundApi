@@ -6,22 +6,46 @@ on:
     paths:
       - 'docs/**'
 jobs:
-  deploy-doc:
-    name: 部署文档
+  docs:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v2
         with:
-          version: 7.1.6
+          fetch-depth: 0
+
       - uses: actions/setup-node@v3
         with:
-          node-version: 16
+          node-version: 14
           cache: 'pnpm'
-      - run: pnpm i
-      - run: pnpm run docs:build
-      - uses: actions/checkout@v2.3.1
-      - uses: JamesIves/github-pages-deploy-action@4.1.4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
-          branch: gh-pages
-          folder: ./docs/.vuepress/dist
+          node-version: '16'
+
+      # cache node_modules
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        id: pnpm-cache
+        with:
+          path: |
+            **/node_modules
+          key: ${{ runner.os }}-pnpm-${{ hashFiles('**/pnpm.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-
+
+      - name: Install dependencies
+        if: steps.pnpm-cache.outputs.cache-hit != 'true'
+        run: pnpm --frozen-lockfile
+
+      - name: Build VuePress site
+        run: pnpm docs:build
+
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2
+        with:
+          target_branch: gh-pages
+          build_dir: docs/.vuepress/dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
