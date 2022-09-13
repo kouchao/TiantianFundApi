@@ -14,6 +14,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 7.1.6
+
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
@@ -22,7 +26,7 @@ jobs:
 
       - name: Install dependencies
         run: pnpm i --frozen-lockfile
-        
+
       - name: Build VuePress site
         run: pnpm docs:build
 
