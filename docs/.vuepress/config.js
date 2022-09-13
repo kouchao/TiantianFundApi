@@ -1,7 +1,7 @@
 import { defaultTheme } from 'vuepress'
 export default {
+  base: '/TiantianFundApi/',
   theme: defaultTheme({
-    base: '/TiantianFundApi/',
     navbar: [
       {
         text: '首页',
