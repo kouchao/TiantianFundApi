@@ -22,6 +22,6 @@ features:
   - title: docker 部署
     details: 在 docker 中部署，使用起来更方便
   - title: vercel 示例
-    details: 使用 vercel 提供线上 api 测试
+    details: 使用 vercel 提供线上 api
 footer: Copyright © 2022-present kouchao
 ---

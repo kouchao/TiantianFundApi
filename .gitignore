@@ -29,4 +29,3 @@ coverage
 # vite
 .temp
 .cache
-dist
