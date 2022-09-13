@@ -15,12 +15,14 @@ jobs:
           fetch-depth: 0
 
       - name: Setup Node.js
-      - uses: actions/setup-node@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: 'pnpm'
-      - run: pnpm install --frozen-lockfile
-      - run: pnpm docs:build
+        run: pnpm install --frozen-lockfile
+
+      - name: Build VuePress site
+        run: pnpm docs:build
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2
