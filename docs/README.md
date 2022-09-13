@@ -1,7 +1,7 @@
 ---
 home: true
-title: 天天基金网 API（开发中）
-heroText: 天天基金网 API（开发中）
+title: 天天基金网 API
+heroText: 天天基金网 API
 tagline: 天天基金网 NodeJS 版 API
 actions:
   - text: 快速开始
