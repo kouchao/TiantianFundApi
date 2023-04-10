@@ -1,6 +1,6 @@
 {
   "name": "tiantian-fund-api",
-  "version": "v1.0.0-alpha.5",
+  "version": "v1.0.1",
   "description": "天天基金网 Node.js API service",
   "main": "src/index.js",
   "files": [
