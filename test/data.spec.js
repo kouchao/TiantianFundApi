@@ -11,9 +11,9 @@ describe('大数据接口', function () {
   it('获取大数据榜单数据详情', async function () {
     const res = await axios(`${host}/bigDataDetail`, {
       params: {
-        cltype: '001',
+        cltype: '061',
       },
     });
-    assert.equal(res.data.datas.ClType, '001');
+    assert.equal(res.data.datas.ClType, '061');
   });
 });
