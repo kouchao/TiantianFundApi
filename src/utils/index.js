@@ -53,12 +53,6 @@ const jsonp = async (url, callback, params) => {
   return JSON.parse(js.slice(callback.length + 1, js.length - 1));
 };
 
-const jsonp2 = async (url, callback, params) => {
-  const res = await axios(url, { params });
-  const js = res.data.replace(/[\n]/g, '').replace(/\r/g, '');
-  return JSON.parse(js.slice(callback.length + 1, js.length - 2));
-};
-
 const getModules = () => {
   const files = glob.sync('./src/module/*.js');
   return files.map((path) => {
@@ -70,10 +64,22 @@ const getModules = () => {
   });
 };
 
+const sse = async (url, params) => {
+  const res = await axios(url, {
+    headers,
+    params: {
+      ...baseData,
+      ...params,
+    },
+    responseType: 'stream',
+  });
+  return res.data;
+};
+
 module.exports = {
   request,
   post,
   jsonp,
-  jsonp2,
   getModules,
+  sse,
 };

@@ -6,7 +6,7 @@ const { request } = require('../utils/index.js');
 module.exports = async (params = {}) => {
   const url = 'https://push2his.eastmoney.com/api/qt/stock/kline/get';
   return await request(url, {
-    secid: `0.${params.code}`,
+    secid: `${params.type}.${params.code}`,
     klt: params.klt,
     lmt: params.lmt,
     fqt: params.fqt,

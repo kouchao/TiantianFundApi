@@ -19,7 +19,7 @@ function startServe() {
 
       router.get(routerPath, async (ctx, next) => {
         ctx.status = 200;
-        ctx.body = await api(ctx.request.query);
+        ctx.body = await api(ctx.request.query, ctx);
         next();
       });
     });
