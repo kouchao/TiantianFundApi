@@ -37,4 +37,16 @@ describe('搜索接口', function () {
     const res = await axios(`${host}/fundCompanyBaseList`);
     assert.ok(res.data.Datas.length);
   });
+
+  it('基金搜索（以名称）', async function () {
+    const res = await axios(`${host}/fundSearchInfoByName`, {
+      params: {
+        key: '华夏',
+        orderType: '2',
+        pageindex: 1,
+        pagesize: 20,
+      },
+    });
+    assert.ok(res.data.totalCount);
+  });
 });

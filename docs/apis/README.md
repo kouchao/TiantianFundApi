@@ -101,6 +101,46 @@
 }]
 ```
 
+### 基金搜索（以名称）
+`/fundSearchInfoByName`
+
+**参数**
+
+`orderType` 搜索排序
+
+- 默认: `2`
+- 按热度: `1`
+
+`key`: 关键字
+
+`pageindex`: 页码
+
+`pagesize`: 每页条数
+
+**结果**
+```js
+{
+  "totalCount": 647, // 总数
+  "data": [{
+    "fcode": "000075", // 基金代码
+    "showfcode": "000075",
+    "ftype": "QDII",
+    "shortname": "华夏恒生ETF联接现汇", // 基金名称
+    "hightlight": "000075_<font color='#ff4400'>华夏</font>恒生ETF联接现汇", // 关键字高亮
+    "fcodetype": 0,
+    "secondfcodetype": 0,
+    "abbname": "HXHSETFLJXH",
+    "abbtname": "HUAXIAHENGSHENGETFLIANJIEXIANHUI",
+    "foreshortname": "华夏恒生ETF联接现汇",
+    "t": "T",
+    "p": "F",
+    "f": "",
+    "newtexch": ""
+  },]
+}
+
+```
+
 ### 获取基金列表（按字母）
 
 **路由**
@@ -194,6 +234,7 @@
 **路由**
 
 `/fundCompanyBaseList`
+
 
 ## 基金主题
 
