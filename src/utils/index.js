@@ -56,10 +56,10 @@ const jsonp = async (url, callback, params) => {
 const getModules = () => {
   const files = glob.sync('./src/module/*.js');
   return files.map((path) => {
-    const fileName = path.replace('./src/module/', '').replace('.js', '');
+    const fileName = path.replace('src/module/', '').replace('.js', '');
     return {
       fileName,
-      path: path.replace('/src', ''),
+      path: path.replace('src', './'),
     };
   });
 };
