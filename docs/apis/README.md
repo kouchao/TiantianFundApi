@@ -396,7 +396,7 @@
 
 `pageIndex`: 页码 1 开始
 
-`pageSize`: 每页条数
+`pageSize`: 每页条数 最大30条
 
 `CompanyId`: 基金公司 id （通过`/fundCompanyBaseList`获取）
 
