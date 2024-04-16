@@ -11,11 +11,11 @@ export default defineUserConfig({
       },
       {
         text: '指南',
-        link: '/guide',
+        link: '/guide/',
       },
       {
         text: 'Api 列表',
-        link: '/apis',
+        link: '/apis/',
       },
       {
         text: 'Github',

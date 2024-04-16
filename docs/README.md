@@ -5,10 +5,10 @@ heroText: 天天基金网 API
 tagline: 天天基金网 NodeJS 版 API
 actions:
   - text: 快速开始
-    link: /guide
+    link: /guide/
     type: primary
   - text: Api 列表
-    link: /apis
+    link: /apis/
     type: secondary
 features:
   - title: 持续更新
