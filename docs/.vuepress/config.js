@@ -1,5 +1,7 @@
-import { defaultTheme } from 'vuepress'
-export default {
+import {defineUserConfig} from 'vuepress'
+import { defaultTheme } from '@vuepress/theme-default'
+import { viteBundler } from '@vuepress/bundler-vite'
+export default defineUserConfig({
   base: '/TiantianFundApi/',
   theme: defaultTheme({
     navbar: [
@@ -21,4 +23,5 @@ export default {
       },
     ],
   }),
-}
+  bundler: viteBundler(),
+})
