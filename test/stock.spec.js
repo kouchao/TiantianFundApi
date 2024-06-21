@@ -23,7 +23,7 @@ describe('股票', function () {
         fqt: '1',
       },
     });
-    assert.equal(res.data.data.name, '香飘飘');
+    assert.equal(res.data.data.name, 'XD香飘飘');
   });
 
   it('获取股票交易明细', async function () {
