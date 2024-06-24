@@ -5,6 +5,8 @@ const { request } = require('../utils/index.js');
  */
 module.exports = async (params = {}) => {
   const url =
-    'https://fundmobapi.eastmoney.com/FundMApi/FundVarietieValuationDetail.ashx';
-  return request(url, params);
+    'https://fundcomapi.tiantianfunds.com/mm/fundTrade/FundValuationDetail';
+  const res = await request(url, params);
+
+  return res.data ? JSON.parse(res.data) : res.data
 };

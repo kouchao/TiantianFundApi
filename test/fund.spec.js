@@ -78,7 +78,7 @@ describe('基金接口', function () {
   it('获取基金净值估算（实时）', async function () {
     const res = await axios(`${host}/fundVarietieValuationDetail`, {
       params: {
-        FCODE: '003834',
+        FCODE: '470007',
       },
     });
     assert.ok(res.data.Datas.length);
